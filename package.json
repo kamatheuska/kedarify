@@ -7,9 +7,11 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lerna run start --stream",
     "start:showroom": "lerna run --scope showroom start --stream",
     "start:api": "lerna run --scope api start --stream",
-    "dev:api": "lerna run --scope api dev --stream"
+    "dev:api": "lerna run --scope api dev --stream",
+    "clean": "lerna clean"
   },
   "repository": {
     "type": "git",
