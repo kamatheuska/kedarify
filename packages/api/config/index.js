@@ -13,10 +13,14 @@ const getNodeEnvIndependentEnvs = () => ({
 });
 
 function buildConfigByEnvironment() {
+
+  const showroomBaseUrl = isDevelopment ? getEnvVar('SHOWROOM_BASE_URL') : 'http://localhost:3000';
+
   return {
     ...getNodeEnvIndependentEnvs(),
     isTest,
     isDevelopment,
+    showroomBaseUrl,
   };
 }
 

@@ -1,7 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { API_BASE_URL } from "./config";
 
 function App() {
+  async function callApi() {
+    const url = `${API_BASE_URL}/api/test`
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log("Printing- - - - url:", url);
+    console.log("Printing- - - - data:", data);
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +26,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={async () => await callApi()}>test</button>
       </header>
     </div>
   );
