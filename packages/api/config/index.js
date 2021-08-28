@@ -31,6 +31,7 @@ const getShowroomBaseUrl = () => {
 function buildConfigByEnvironment() {
   const showroomBaseUrl = getShowroomBaseUrl();
   const mongoDbUri = getMongoDbUri();
+
   return {
     ...getNodeEnvIndependentEnvs(),
     isTest,
@@ -42,7 +43,6 @@ function buildConfigByEnvironment() {
 
 function initConfig() {
   dotenv.config();
-  console.log("Printing- - - - process.env.NODE_ENV:", process.env.NODE_ENV);
   $config = buildConfigByEnvironment();
 
   logDebug("initConfig", "INITIAL CONFIG", $config);
