@@ -1,0 +1,27 @@
+{
+  "name": "kedarify",
+  "version": "1.0.0",
+  "description": "An app to make live meetups smoother and poroductivier",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:showroom": "lerna run --scope showroom start --stream",
+    "start:api": "lerna run --scope api start --stream",
+    "dev:api": "lerna run --scope api dev --stream"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamatheuska/kedarify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamatheuska/kedarify/issues"
+  },
+  "homepage": "https://github.com/kamatheuska/kedarify#readme",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
