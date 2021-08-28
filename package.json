@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/kamatheuska/kedarify.git"
   },
-  "author": "",
+  "author": "Nicolas Ramirez <nicolas.ramirez.ka@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kamatheuska/kedarify/issues"
