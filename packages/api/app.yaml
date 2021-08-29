@@ -6,3 +6,6 @@ automatic_scaling:
   max_idle_instances: automatic
   min_pending_latency: automatic
   max_pending_latency: automatic
+env_variables:
+  SHOWROOM_BASE_URL: "https://showroom-kedarify.netlify.app"
+  DEBUG_MODE: "https://showroom-kedarify.netlify.app"
