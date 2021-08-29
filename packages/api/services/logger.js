@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 const _ = require("lodash");
 
-const isDebug = process.env.DEBUG_MODE === "true";
-const skipLogging = process.env.NODE_ENV !== "test" ? false : !isDebug;
+const isDebug = () => process.env.DEBUG_MODE === "true";
+const skipLogging = () => process.env.NODE_ENV !== "test" ? false : !isDebug;
 
 function buildLogContextString(context) {
   if (typeof context === "object" && _.has(context, "method")) {
@@ -14,19 +14,19 @@ function buildLogContextString(context) {
 }
 
 function logRequestInfo(context, ...info) {
-  if (skipLogging) return;
+  if (skipLogging()) return;
   const contextString = buildLogContextString(context);
   console.info(contextString, ...info);
 }
 
 function logRequestError(context, ...errors) {
-  if (skipLogging) return;
+  if (skipLogging()) return;
   const contextString = buildLogContextString(context);
   console.error(contextString, ...errors);
 }
 function logInfo(contextString, ...logs) {
-  if (skipLogging) return;
-  if (isDebug) console.trace();
+  if (skipLogging()) return;
+  if (isDebug()) console.trace();
 
   console.info(contextString, ...logs);
 }
@@ -46,13 +46,13 @@ function $logInfo(context, ...logs) {
 function logDebug(context, ...logs) {
   const contextString = buildLogContextString(context);
 
-  if (isDebug) {
+  if (isDebug()) {
     console.info(contextString, ...logs);
   }
 }
 
 function logError(context, error) {
-  if (skipLogging) return;
+  if (skipLogging()) return;
   const contextString = buildLogContextString(context);
   console.error(contextString, error);
 }
