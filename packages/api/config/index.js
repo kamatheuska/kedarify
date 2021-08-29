@@ -8,7 +8,7 @@ let $config;
 
 const getNodeEnvIndependentEnvs = () => ({
   port: getEnvVar("PORT", 5000, Number),
-  nodeEnv: getEnvVar("NODE_ENV", "development"),
+  nodeEnv: getEnvVar("NODE_ENV"),
   debugMode: getEnvVar("DEBUG_MODE", "false", Boolean),
 });
 
