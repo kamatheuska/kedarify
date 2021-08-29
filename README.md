@@ -2,8 +2,18 @@
 
 The idea of this project is to have:
 
-- An api in NodeJS service deployed as an App Engine to a GCP Project.
-- Service should be connected to a Cloud DB NoSQL
+- An api in NodeJS service deployed as
+
+1. OPTION #1: Digital Ocean
+
+- A dockerized api to a Digital Ocean Droplet.
+- MongoDB on Atlas
+
+2. OPTION #2: GCP
+
+- An App Engine to a GCP Project.
+- Cloud Firestore as a DB.
+
 - The frontend should be composed of different packages, build as a CRA app delivered via Netlify or Heroku
 
 ## Install

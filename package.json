@@ -11,13 +11,14 @@
     "start:showroom": "lerna run --scope showroom start --stream",
     "start:api": "lerna run --scope api start --stream",
     "dev:api": "lerna run --scope api dev --stream",
-    "clean": "lerna clean"
+    "clean": "lerna clean",
+    "deploy": "./deploy.sh"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kamatheuska/kedarify.git"
   },
-  "author": "",
+  "author": "Nicolas Ramirez <nicolas.ramirez.ka@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kamatheuska/kedarify/issues"
