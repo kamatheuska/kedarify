@@ -1,20 +1,6 @@
 # Kedarify
 
-The idea of this project is to have:
-
-- An api in NodeJS service deployed as
-
-1. OPTION #1: Digital Ocean
-
-- A dockerized api to a Digital Ocean Droplet.
-- MongoDB on Atlas
-
-2. OPTION #2: GCP
-
-- An App Engine to a GCP Project.
-- Cloud Firestore as a DB.
-
-- The frontend should be composed of different packages, build as a CRA app delivered via Netlify or Heroku
+Showroom is on https://showroom-kedarify.netlify.app/
 
 ## Install
 
@@ -44,3 +30,13 @@ npm run dev:api
 # To start all run; (logs as a stream)
 npm start
 ```
+
+## Deploy
+
+### Api
+
+Api its deployed with internal script from admin machine
+
+### Showroom
+
+Deployed on [Netlify](https://www.netlify.com/)
